@@ -17,8 +17,8 @@ class TestCalculator():
     def teardown_method(self):
         pass
 
-    @pytest.mark.parametrize( ("a", "c", "expected"), [(1,2,3), (1,1,2), (2,3,5), (1,0,1)] )
-    def test_addition_generic(self, a, c, expected):
+    @pytest.mark.parametrize( ("a", "b", "expected"), [(1,2,3), (1,1,2), (2,3,5), (1,0,1)] )
+    def test_addition_generic(self, a, b, expected):
         assert self.calc.addition(a, b) == expected
 
     def test_addition(self):
